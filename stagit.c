@@ -504,21 +504,21 @@ writeheader(FILE *fp, const char *title)
 	        name, relpath);
 	fprintf(fp, "<link rel=\"stylesheet\" type=\"text/css\" href=\"../%sstyle.css\" />\n", relpath);
 	fputs("</head>\n<body>\n<div id=\"head\"><table><tr><td>", fp);
-	fprintf(fp, "<a class=\"logo\" href=\"../%s\"><img src=\"../%slogo.svg\" alt=\"\" width=\"32\" height=\"32\" /></a>",
+	fprintf(fp, "<a class=\"logo\" href=\"../%s\"><img src=\"../%slogo.svg\" alt=\"\" width=\"42\" height=\"42\" /></a>",
 	        relpath, relpath);
-	fputs("</td><td><strong>", fp);
+	fputs("</td><td><h1>", fp);
 	xmlencode(fp, strippedname, strlen(strippedname));
-	fputs("</strong><span class=\"desc\"> - ", fp);
+	fputs("</h1><span class=\"desc\"> ", fp);
 	xmlencode(fp, description, strlen(description));
-	fputs("</span>\n", fp);
+	fputs("</span>\n</td></tr>", fp);
 	if (cloneurl[0]) {
-		fputs("<p class=\"url\">git clone <a href=\"", fp);
+		fputs("<tr><td></td><td>git clone <a class=\"url\" href=\"", fp);
 		xmlencode(fp, cloneurl, strlen(cloneurl));
 		fputs("\">", fp);
 		xmlencode(fp, cloneurl, strlen(cloneurl));
-		fputs("</a></p>\n", fp);
+		fputs("</a>\n</td></tr>", fp);
 	}
-	fputs("</td></tr></table>\n<p>", fp);
+	fputs("<tr><td></td><td>\n<p>", fp);
 	if (readme)
 		fprintf(fp, "<a href=\"%sabout.html\">About</a> | ", relpath);
 	fprintf(fp, "<a href=\"%slog.html\">Log</a> | ", relpath);
@@ -533,7 +533,7 @@ writeheader(FILE *fp, const char *title)
 	if (contribute)
 		fprintf(fp, " | <a href=\"%sfile/%s.html\">Contribute</a>",
 		        relpath, contribute);
-	fputs("</p>\n</div>\n<hr/>\n<div id=\"content\">\n", fp);
+	fputs("</p>\n</td></tr></table></div>\n<hr/>\n<div id=\"content\">\n", fp);
 }
 
 void
