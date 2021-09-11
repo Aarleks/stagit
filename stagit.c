@@ -512,7 +512,7 @@ writeheader(FILE *fp, const char *title)
 	xmlencode(fp, description, strlen(description));
 	fputs("</span>\n</td></tr>", fp);
 	if (cloneurl[0]) {
-		fputs("<tr><td></td><td>git clone <a class=\"url\" href=\"", fp);
+		fputs("<tr><td></td><td>git clone <a class=\"clone\" href=\"", fp);
 		xmlencode(fp, cloneurl, strlen(cloneurl));
 		fputs("\">", fp);
 		xmlencode(fp, cloneurl, strlen(cloneurl));
