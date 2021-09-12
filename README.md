@@ -1,13 +1,9 @@
 stagit
 ======
 
-Personal fork of static git page generator. It generates static HTML pages for a
-git repository.
+This is my fork of [Oscar Benedito's](https://git.oscarbenedito.com/stagit/) fork of the static git page generator, `stagit`. This program generates static HTML pages for a git repository. My changes are entirely aesthetic - some `html` layout, `css`, and the `ico` and `png` files.
 
-This fork uses [md4c](https://github.com/mity/md4c) to convert the README
-markdown into HTML and then shows it in an about page for each repository, this
-adds a new dependency. On top of that, the assets have been changed, creating a
-personal theme. The scripts have also been changed to fit my needs.
+Benedito's fork uses [md4c](https://github.com/mity/md4c) to convert the README markdown into HTML and then shows it in an about page for each repository, this adds a new dependency. On top of that, the assets have been changed, creating a personal theme. The scripts have also been changed to fit my needs.
 
 
 Usage
