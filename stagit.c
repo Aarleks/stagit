@@ -496,7 +496,7 @@ writeheader(FILE *fp, const char *title)
 	if (description[0])
 		fputs(" - ", fp);
 	xmlencode(fp, description, strlen(description));
-	fprintf(fp, "</title>\n<link rel=\"icon\" type=\"image/svg+xml\" href=\"../%slogo.svg\"/>\n", relpath);
+	fprintf(fp, "</title>\n<link rel=\"icon\" type=\"image/png+xml\" href=\"../%slogo.png\"/>\n", relpath);
 	fprintf(fp, "<link rel=\"alternate icon\" href=\"../%sfavicon.ico\"/>\n", relpath);
 	fprintf(fp, "<link rel=\"alternate\" type=\"application/atom+xml\" title=\"%s Atom Feed\" href=\"%satom.xml\" />\n",
 	        name, relpath);
@@ -504,7 +504,7 @@ writeheader(FILE *fp, const char *title)
 	        name, relpath);
 	fprintf(fp, "<link rel=\"stylesheet\" type=\"text/css\" href=\"../%sstyle.css\" />\n", relpath);
 	fputs("</head>\n<body>\n<div id=\"head\"><table><tr><td>", fp);
-	fprintf(fp, "<a class=\"logo\" href=\"../%s\"><img src=\"../%slogo.svg\" alt=\"\" width=\"42\" height=\"42\" /></a>",
+	fprintf(fp, "<a class=\"logo\" href=\"../%s\"><img src=\"../%slogo.png\" alt=\"\" width=\"42\" height=\"42\" /></a>",
 	        relpath, relpath);
 	fputs("</td><td><h1>", fp);
 	xmlencode(fp, strippedname, strlen(strippedname));
