@@ -44,7 +44,7 @@ body {
 }
 
 #head, #content, .table-container {
-	max-width: 800px;
+	max-width: 900px;
 	overflow-x: auto;
 	margin: auto;
 }
@@ -92,6 +92,21 @@ a {
 	font-family: monospace;
 }
 
+#home .name h1 {
+	font-size: 2.75em;
+	font-style: italic;
+	font-family: 'IBM Plex Mono';
+	margin-top: 0.5em;
+}
+
+#home .name h2 {
+	font-size: 1.75em;
+	font-family: 'IBM Plex Mono';
+	font-style: italic;
+	margin: 0em;
+	padding: 0px;
+}
+
 #home h1 {
 	font-size: 2.5em;
 	font-style: italic;
@@ -109,6 +124,7 @@ a {
 #head h1 {
     font-family: 'IBM Plex Mono';
     font-size: 2.5rem;
+    margin-top: 1.4em;
 }
 
 h2, h3, h4, h5, h6 {

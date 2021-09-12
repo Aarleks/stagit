@@ -72,9 +72,9 @@ writeheader(FILE *fp)
 	xmlencode(fp, description, strlen(description));
 	fprintf(fp, " ~acn</title>\n<link rel=\"icon\" href=\"%sfavicon.ico\" />\n", relpath);
 	fprintf(fp, "<link rel=\"stylesheet\" type=\"text/css\" href=\"%sstyle.css\" />\n", relpath);
-	fputs("</head>\n<body id=\"home\">\n<h1>~acn</h1>\n<h2>", fp);
+	fputs("</head>\n<body id=\"home\">\n<div class=\"name\">\n<h1>~acn</h1>\n<h2>", fp);
 	xmlencode(fp, description, strlen(description));
-	fputs("</h2>\n<hr>\n<div id=\"content\">\n"
+	fputs("</h2>\n</div>\n<hr>\n<div id=\"content\">\n"
 		"<h2 id=\"repositories\"># Repositories</h2>\n"
 		"<div class=\"table-container\">\n<table id=\"index\"><thead>\n"
 		"<tr><td><b>Name</b></td><td><b>Description</b></td><td><b>Last commit</b></td></tr>"
