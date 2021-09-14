@@ -21,9 +21,9 @@ if test "${name}" = ""; then
 fi
 
 # paths must be absolute
-reposdir="/srv/git"
+reposdir="/var/www/git"
 dir="${reposdir}/${name}"
-destdir="/srv/git/html"
+destdir="/var/www/stagit"
 cachefile=".stagit-build-cache"
 
 if ! test -d "${dir}"; then
@@ -59,7 +59,7 @@ mkdir -p "${destdir}/${d}"
 cd "${destdir}/${d}" || exit 1
 
 # make pages
-stagit -c "${cachefile}" -u "https://git.oscarbenedito.com/$d/" "${reposdir}/${r}"
+stagit -c "${cachefile}" -u "git://git.alexnorman.xyz/$d/" "${reposdir}/${r}"
 [ -f "about.html" ] \
     && ln -sf "about.html" "index.html" \
     || ln -sf "log.html" "index.html"

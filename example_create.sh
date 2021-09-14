@@ -17,15 +17,15 @@
 # - sh example_create.sh
 
 # path must be absolute
-reposdir="/srv/git"
-webdir="/srv/git/html"
+reposdir="/var/www/git"
+webdir="/var/www/stagit"
 defaultdir="/usr/local/share/doc/stagit"
 
 mkdir -p "$webdir" || exit 1
 
 # set assets if not already there
 ln -s "$defaultdir/style.css" "$webdir/style.css" 2> /dev/null
-ln -s "$defaultdir/logo.svg" "$webdir/logo.svg" 2> /dev/null
+ln -s "$defaultdir/logo.png" "$webdir/logo.png" 2> /dev/null
 ln -s "$defaultdir/favicon.ico" "$webdir/favicon.ico" 2> /dev/null
 
 # clean
@@ -46,7 +46,7 @@ for dir in "$reposdir/"*.git/; do
 
     mkdir -p "$webdir/$d"
     cd "$webdir/$d" || continue
-    stagit -c ".stagit-build-cache" -u "https://git.oscarbenedito.com/$d/" "$reposdir/$r"
+    stagit -c ".stagit-build-cache" -u "git://git.alexnorman.xyz/$d/" "$reposdir/$r"
 
     # symlinks
     [ -f "about.html" ] \
