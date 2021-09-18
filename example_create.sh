@@ -27,6 +27,10 @@ mkdir -p "$webdir" || exit 1
 ln -s "$defaultdir/style.css" "$webdir/style.css" 2> /dev/null
 ln -s "$defaultdir/logo.png" "$webdir/logo.png" 2> /dev/null
 ln -s "$defaultdir/favicon.ico" "$webdir/favicon.ico" 2> /dev/null
+ln -s "$defaultdir/IBMPlexSans-Regular.woff" "$webdir/IBMPlexSans-Regular.woff" 2> /dev/null
+ln -s "$defaultdir/IBMPlexSans-Regular.woff2" "$webdir/IBMPlexSans-Regular.woff2" 2> /dev/null
+ln -s "$defaultdir/IBMPlexMono-Regular.woff" "$webdir/IBMPlexMono-Regular.woff" 2> /dev/null
+ln -s "$defaultdir/IBMPlexMono-Regular.woff2" "$webdir/IBMPlexMono-Regular.woff2" 2> /dev/null
 
 # clean
 for dir in "$webdir/"*/; do
