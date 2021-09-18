@@ -1,6 +1,8 @@
 stagit
 ======
 
+Test
+
 My fork of [Oscar Benedito's](https://git.oscarbenedito.com/stagit/) fork of the static git page generator, `stagit`.
 
 This program generates static HTML pages for a git repository and an index page for a collection of repositories. My changes are entirely aesthetic - some `html` layout, `css`, and the `ico` and `png` files.
