@@ -53,7 +53,7 @@ dist:
 	rm -rf ${NAME}-${VERSION}
 	mkdir -p ${NAME}-${VERSION}
 	cp -f ${MAN1} ${HDR} ${SRC} ${COMPATSRC} ${DOC} \
-		Makefile favicon.ico logo.svg style.css \
+		Makefile favicon.ico logo.png style.css \
 		example_create.sh example_post-receive.sh grm \
 		${NAME}-${VERSION}
 	# make tarball
@@ -83,7 +83,7 @@ install: all
 	mkdir -p ${DESTDIR}${DOCPREFIX}
 	cp -f style.css\
 		favicon.ico\
-		logo.svg\
+		logo.png\
 		example_create.sh\
 		example_post-receive.sh\
 		README.md\
@@ -100,7 +100,7 @@ uninstall:
 	rm -f \
 		${DESTDIR}${DOCPREFIX}/style.css\
 		${DESTDIR}${DOCPREFIX}/favicon.ico\
-		${DESTDIR}${DOCPREFIX}/logo.svg\
+		${DESTDIR}${DOCPREFIX}/logo.png\
 		${DESTDIR}${DOCPREFIX}/example_create.sh\
 		${DESTDIR}${DOCPREFIX}/example_post-receive.sh\
 		${DESTDIR}${DOCPREFIX}/README.md
