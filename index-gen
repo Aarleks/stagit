@@ -1,0 +1,24 @@
+#!/bin/bash
+
+REPO="${1}"
+TITLE="${2}"
+
+index_gen() {
+		cat <<EOF
+<!DOCTYPE html>
+<html>
+<head>
+<title>"$TITLE"</title>
+<link rel="icon" type="image/ico" href="favicon.ico" />
+ <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+</head>
+<body>
+	<h3>"$TITLE"</h3>
+	<p>To get access to the repo use: <br />
+	<code>git clone <a href="git://git.alexnorman.xyz/$REPO.git/">git://git.alexnorman.xyz/$REPO.git</a></code> </p>
+</body>
+</html>
+EOF
+}
+
+index_gen
