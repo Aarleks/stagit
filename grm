@@ -197,9 +197,10 @@ ${BLUE}enter index [default: ${GREEN}1${BLUE}]${RESET}"
  # ln -s "$repo_path" "$STAGIT_WEB_ROOT"
 
   echo "generating index.html for .git page"
-  mkdir -p "$STAGIT_WEB_ROOT/$repo_name"
-  $DEFAULT_DIR/index-gen $repo_name $repo_desc > $STAGIT_WEB_ROOT/${repo_name}/about.html
-  ln -sf "about.html" "index.html"
+  #mkdir -p "$STAGIT_WEB_ROOT/$repo_name"
+  recompile_repo "$repo_name"
+  #$DEFAULT_DIR/index-gen $repo_name $repo_desc > $STAGIT_WEB_ROOT/${repo_name}/about.html
+  #ln -sf "about.html" "index.html"
 
   echo "done!"
 }
