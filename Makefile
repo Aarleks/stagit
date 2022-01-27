@@ -79,8 +79,6 @@ install: all
 	for f in ${BIN}; do chmod 755 ${DESTDIR}${PREFIX}/bin/$$f; done
 	cp -f grm ${DESTDIR}${PREFIX}/bin
 	chmod 755 ${DESTDIR}${PREFIX}/bin/grm
-	cp -f index-gen ${DESTDIR}${PREFIX}/bin
-	chmod 755 ${DESTDIR}${PREFIX}/bin/index-gen
 	# installing example files.
 	mkdir -p ${DESTDIR}${DOCPREFIX}
 	cp -f style.css\
@@ -88,6 +86,7 @@ install: all
 		logo.png\
 		example_create.sh\
 		example_post-receive.sh\
+		index-gen\
 		README.md\
 		${DESTDIR}${DOCPREFIX}
 	# installing manual pages.
