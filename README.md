@@ -1,7 +1,7 @@
 stagit
 ======
 
-My fork of [Oscar Benedito's](https://git.oscarbenedito.com/stagit/) fork of the static git page generator, `stagit`, with the addition of the `grm` and `index-gen` scripts from [Lucan Burns'](https://git.lmburns.com/stagit-md/about.html) fork.
+My fork of [Oscar Benedito's](https://git.oscarbenedito.com/stagit/) fork of the static git page generator, `stagit`, with the addition of the `grm` and `index-gen` scripts from [Lucas Burns'](https://git.lmburns.com/stagit-md/about.html) fork.
 
 My own changes are entirely aesthetic - some `html` layout, `css`, and the `ico` and `png` files.
 
