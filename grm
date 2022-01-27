@@ -17,7 +17,7 @@ GRM_OWNER="Alex Norman"
 GRM_URL_PREFIX="git://git.alexnorman.xyz"
 
 # path of the post-receive hooks for stagit
-GRM_POSTRECV_HOOK="/usr/local/share/doc/stagit/example_post-receive"
+GRM_POSTRECV_HOOK="/usr/local/share/doc/stagit/example_post-receive.sh"
 
 # root directory of stagit web pages
 STAGIT_WEB_ROOT="/var/www/stagit"
