@@ -193,11 +193,13 @@ ${BLUE}enter index [default: ${GREEN}1${BLUE}]${RESET}"
   ln -sf "$postrecv_path" "$repo_path/hooks/post-receive"
   mv "$repo_path/hooks/post-update.sample" "$repo_path/hooks/post-update"
 
-  echo "linking .git to main folder"
-  ln -s "$repo_path" "$STAGIT_WEB_ROOT"
+ # echo "linking .git to main folder"
+ # ln -s "$repo_path" "$STAGIT_WEB_ROOT"
 
   echo "generating index.html for .git page"
-  $DEFAULT_DIR/index-gen $repo_name $repo_desc > $repo_path/index.html
+  mkdir -p "$STAGIT_WEB_ROOT/$repo_name"
+  $DEFAULT_DIR/index-gen $repo_name $repo_desc > $STAGIT_WEB_ROOT/${repo_name}/about.html
+  ln -sf "about.html" "index.html"
 
   echo "done!"
 }
