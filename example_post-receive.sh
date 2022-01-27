@@ -67,7 +67,7 @@ ln -sfT "${dir}" ".git"
 
 # generate index arguments
 args=""
-for cat in "Projects" "Personal setup" "Miscellanea"; do
+for cat in "Projects" "Forks"; do
     args="$args -c \"$cat\""
     for dir in "$reposdir/"*.git/; do
         dir="${dir%/}"
