@@ -215,7 +215,7 @@ grm_remove() {
     fi
   done
   # only rebuild index if stagit exists
-  command -v stagit-index >/dev/null && rebuild_index &
+  command -v stagit-index >/dev/null &
   wait
 }
 
