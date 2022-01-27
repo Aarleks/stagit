@@ -54,7 +54,7 @@ dist:
 	mkdir -p ${NAME}-${VERSION}
 	cp -f ${MAN1} ${HDR} ${SRC} ${COMPATSRC} ${DOC} \
 		Makefile favicon.ico logo.png style.css \
-		example_create.sh example_post-receive.sh grm \
+		example_create.sh example_post-receive.sh grm index-gen \
 		${NAME}-${VERSION}
 	# make tarball
 	tar -cf - ${NAME}-${VERSION} | \
@@ -79,6 +79,8 @@ install: all
 	for f in ${BIN}; do chmod 755 ${DESTDIR}${PREFIX}/bin/$$f; done
 	cp -f grm ${DESTDIR}${PREFIX}/bin
 	chmod 755 ${DESTDIR}${PREFIX}/bin/grm
+	cp -f index-gen ${DESTDIR}${PREFIX}/bin
+	chmod 755 ${DESTDIR}${PREFIX}/bin/index-gen
 	# installing example files.
 	mkdir -p ${DESTDIR}${DOCPREFIX}
 	cp -f style.css\
