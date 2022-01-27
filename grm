@@ -17,7 +17,7 @@ GRM_OWNER="Alex Norman"
 GRM_URL_PREFIX="git://git.alexnorman.xyz"
 
 # path of the post-receive hooks for stagit
-GRM_POSTRECV_HOOK="/var/www/post-receive"
+GRM_POSTRECV_HOOK="/usr/local/share/doc/stagit/example_post-receive"
 
 # root directory of stagit web pages
 STAGIT_WEB_ROOT="/var/www/stagit"
@@ -124,7 +124,7 @@ grm_new() {
   set -e
   default_owner=${GRM_OWNER:-$(logname)}
   url_prefix=${GRM_URL_PREFIX:-git://$(hostname -f)}
-  postrecv_path=${GRM_POSTRECV_HOOK:-/usr/local/share/doc/stagit/post-receive}
+  postrecv_path=${GRM_POSTRECV_HOOK}
   default_desc="a work in progress"
   default_cat="Projects"
 
