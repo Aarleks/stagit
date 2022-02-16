@@ -86,7 +86,7 @@ writefooter(FILE *fp)
 {
 	fputs("</tbody>\n</table>\n</div>\n"
 		"<h2 id=\"contribute\"># Contact</h2>\n"
-		"<p>If you have any corrections or contributions for these repositories, send your patches to <a href=\"mailto:alex@alexnorman.xyz\">alex@alexnorman.xyz</a>. </p>\n"
+		"<p>If you have any corrections or contributions for these repositories, send your patches to <a href=\"mailto:alex@alexnorman.xyz\">alex@alexnorman.xyz</a>. Or you can head back to <a href=\"https://alexnorman.xyz\">my website</a>.</p>\n"
 		"<p>You can also find these repos on <a href=\"https://github.com/aarleks\">GitHub</a> and submit pull requests there.</p>\n"
 		"</div>\n</body>\n</html>\n", fp);
 }

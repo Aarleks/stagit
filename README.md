@@ -5,6 +5,18 @@ My fork of [Oscar Benedito's](https://git.oscarbenedito.com/stagit/) fork of the
 
 My own changes are entirely aesthetic - some `html` layout, `css`, and the `ico` and `png` files.
 
+I've drawn upon or taken inspiration from the following resources:
+
+* Stagit - https://git.codemadness.org/stagit/
+* [Oscar Benedito](https://oscarbenedito.com/blog/2020/06/setting-up-a-personal-git-server/)
+* [Theo Henson](https://theohenson.com/blog-git-server.html)
+* [Cale Black](https://hosakacorp.net/p/stagit-server.html)
+* [Christos Margiolis](https://margiolis.net/articles/git-web-frontend-with-stagit1.html)
+* [Lucas Burns' fork of Oscar Benedito's fork of `stagit`](https://git.lmburns.com/stagit-md/)
+* [Brian Lane](https://www.brianlane.com/post/stagit-scripts/)
+
+--
+
 This program generates static HTML pages for a git repository and an index page for a collection of repositories.
 
 Benedito's fork uses [md4c](https://github.com/mity/md4c) to convert the README markdown into HTML and then shows it in an about page for each repository, this adds a new dependency. On top of that, the assets have been changed, creating a personal theme. The scripts have also been changed to fit my needs.
